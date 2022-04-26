@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SmartWinners</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <style>
+        @font-face { 
+            font-family: 'Roboto-Regular';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 400;
+            src: url('assets/fonts/Roboto-Regular.woff') format('woff');
+        }
+        @font-face { 
+            font-family: 'Roboto-Medium';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 500;
+            src: url('assets/fonts/Roboto-Medium.woff') format('woff');
+        }
+        @font-face { 
+            font-family: 'Roboto-Bold';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 700;
+            src: url('assets/fonts/Roboto-Bold.woff') format('woff');
+        }
+        @font-face { 
+            font-family: 'Roboto-Black';
+            font-style: normal;
+            font-display: swap;
+            font-weight: 800;
+            src: url('assets/fonts/Roboto-Black.woff') format('woff');
+        }
+    </style></head>
+
+<body>
+    <div class="overlay"></div>
+    
+    <header class="header">
+        <div class="container header__inner">
+            <div class="header__top d-flex align-items-center">
+    
+                <button type="button" class="burger d-flex d-sm-none align-items-center justify-content-center">
+                    <span></span>
+                </button>
+    
+                <a href="/" class="logo">
+                    <img src="./assets/img/logo.png" alt="">
+                </a>
+               
+                <div class="header__name">
+                    <div class="header__name--text d-flex">
+                        Welcome <span> Roma — </span> 
+                        <a href="/">Logout</a>
+                    </div>
+                    <div class="header__name--text d-flex">
+                        Your balance: <span> Р 0,00 </span> 
+                    </div>
+                </div>
+    
+                <div class="header__choise d-none d-xl-block d-md-block">
+                    <div class="header__choise--links">
+                        <a href="">
+                            <img src="./assets/img/facebook.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/img/twitter.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/img/messenger.png" alt="">
+                        </a>
+                        <a href="">
+                            <img src="./assets/img/whatsapp.png" alt="">
+                        </a>
+                    </div>
+                    
+                    <ul class="header__choise--lang">
+                        <li class="active"> 
+                            <img src="./assets/img/country.png" alt="">
+                            <p>English</p>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.88 9.29006L12 13.1701L8.11998 9.29006C7.72998 8.90006 7.09998 8.90006 6.70998 9.29006C6.31998 9.68006 6.31998 10.3101 6.70998 10.7001L11.3 15.2901C11.69 15.6801 12.32 15.6801 12.71 15.2901L17.3 10.7001C17.69 10.3101 17.69 9.68006 17.3 9.29006C16.91 8.91006 16.27 8.90006 15.88 9.29006V9.29006Z" fill="black"/>
+                            </svg>
+                        </li>
+                        <li value="1">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>English</p>
+                        </li>
+                        <li value="2">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>English</p>
+                        </li>
+    
+                    </ul>
+                      
+                </div>
+    
+                <div class="header__top--login d-flex d-sm-none">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.00038 8.18637C11.0033 8.18637 12.627 6.63744 12.627 4.72673C12.627 2.81602 11.0033 1.26709 9.00038 1.26709C6.99744 1.26709 5.37373 2.81602 5.37373 4.72673C5.37373 6.63744 6.99744 8.18637 9.00038 8.18637Z" fill="white"/>
+                        <path d="M9.00033 9.00042C5.46573 9.00042 2.60034 11.7339 2.60034 15.1057C2.60034 16.0048 3.36446 16.7338 4.30701 16.7338H13.6937C14.6362 16.7338 15.4003 16.0048 15.4003 15.1057C15.4003 11.7339 12.5349 9.00042 9.00033 9.00042Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+    
+            <div class="header__nav d-none d-lg-flex">
+                <ul>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/">PLAY ALL lottery</a></li>
+                    <li><a href="/">LOTTERY GROUPS</a></li>
+                    <li><a href="/">Promotions</a></li>
+                </ul>
+                <a href="/" class="header__nav--prof">My Account</a>
+            </div>
+    
+        </div>
+    </header>
+    
+    
+    <div class="content">
+        
+        <section class="main">
+            <div class="main__img">
+                <img src="./assets/img/banner.jpg" alt="">
+            </div>
+            <ul class="container main__list">
+                <li class="main__item">
+                    <div class="main__item--img">
+                        <img src="./assets/img/item1.png" alt="">
+                    </div>
+                    <div class="main__item--content">
+                        <div class="main__item--title">
+                            <p>you pick</p>
+                            <a href="">Play Now » </a>
+                        </div>
+                        <div class="main__item--text">
+                            <p>It’s easy! Pick from over 40 official lottery games you wish to play. Then select your winning numbers.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="main__item">
+                    <div class="main__item--img">
+                        <img src="./assets/img/item2.png" alt="">
+                    </div>
+                    <div class="main__item--content">
+                        <div class="main__item--title">
+                            <p>we buy</p>
+                            <a href="">More Details » </a>
+                        </div>
+                        <div class="main__item--text">
+                            <p>Once you’ve picked your winning numbers we’ll purchase your ticket on your behalf.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="main__item">
+                    <div class="main__item--img">
+                        <img src="./assets/img/item3.png" alt="">
+                    </div>
+                    <div class="main__item--content">
+                        <div class="main__item--title">
+                            <p>you win!!!</p>
+                            <a href="">Withdraw My Winnings » </a>
+                        </div>
+                        <div class="main__item--text">
+                            <p>When you win, we’ll automatically credit your account the full value of your winnings.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="draws">
+            <div class="container">
+                <h3 clas="title">BIGGEST UPCOMING LOTTERY DRAWS</h3>
+                <div class="draws__list">
+                    <div class="draws__item">
+                        <div class="draws__item--top">
+                            <div class="draws__item--img">
+                                <img src="./assets/img/darws1.png" alt="">
+                            </div>
+                            <div class="draws__item--content">
+                                <div class="draws__item--title">
+                                    <img src="./assets/img/country.png" alt="">
+                                    <p>Mega Millions</p>
+                                </div>
+                                <div class="draws__item--price">$94 000 000</div>
+                            </div>
+                        </div>
+                        <div class="draws__item--bottom d-flex">
+                            <a href="/" class="draws__btn btn">Play Now</a>
+                            <div class="draws__item--time d-flex">
+                               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="white"/>
+                                </svg>
+                                <p>1:22:01</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="draws__item">
+                        <div class="draws__item--top">
+                            <div class="draws__item--img">
+                                <img src="./assets/img/draws2.png" alt="">
+                            </div>
+                            <div class="draws__item--content">
+                                <div class="draws__item--title">
+                                    <img src="./assets/img/country.png" alt="">
+                                    <p>Mega Millions</p>
+                                </div>
+                                <div class="draws__item--price">$94 000 000</div>
+                            </div>
+                        </div>
+                        <div class="draws__item--bottom d-flex">
+                            <a href="/" class="draws__btn btn">Play Now</a>
+                            <div class="draws__item--time d-flex">
+                               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="white"/>
+                                </svg>
+                                <p>1:22:01</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="draws__item">
+                        <div class="draws__item--top">
+                            <div class="draws__item--img">
+                                <img src="./assets/img/draws3.png" alt="">
+                            </div>
+                            <div class="draws__item--content">
+                                <div class="draws__item--title">
+                                    <img src="./assets/img/country.png" alt="">
+                                    <p>Mega Millions</p>
+                                </div>
+                                <div class="draws__item--price">$94 000 000</div>
+                            </div>
+                        </div>
+                        <div class="draws__item--bottom d-flex">
+                            <a href="/" class="draws__btn btn">Play Now</a>
+                            <div class="draws__item--time d-flex">
+                               <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="white"/>
+                                </svg>
+                                <p>1:22:01</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="catalog">
+            <div class="container">
+                <h3 class="catalog__title bg-red">PLAY UPCOMING LOTTERIES ONLINE</h3>
+                <div class="catalog__list">
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__item--img">
+                            <img src="./assets/img/draws2.png" alt="">
+                        </div>
+                        <div class="catalog__item--title d-flex">
+                            <img src="./assets/img/country.png" alt="">
+                            <p>Mega Millions</p>
+                        </div>
+                        <div class="catalog__item--price">$122 000 000</div>
+                        <div class="catalog__item--time">
+                            <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.16577 5H10.1658V9H13.1658V11H8.16577V5Z" fill="#0061A3"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.165771 9C0.165771 4.02944 4.19521 0 9.16577 0C14.1363 0 18.1658 4.02944 18.1658 9C18.1658 13.9706 14.1363 18 9.16577 18C4.19521 18 0.165771 13.9706 0.165771 9ZM2.16577 9C2.16577 5.13401 5.29978 2 9.16577 2C13.0318 2 16.1658 5.13401 16.1658 9C16.1658 12.866 13.0318 16 9.16577 16C5.29978 16 2.16577 12.866 2.16577 9Z" fill="#0061A3"/>
+                            </svg>
+                            <p>1:22:01</p>
+                        </div>
+                        <div class="catalog__item--btn btn">
+                            Play Now
+                        </div>
+                    </div>
+                </div>
+                <a href="/" class="catalog__more btn__more">More Details »</a>
+            </div>
+        </section>
+        
+        <section class="winners">
+            <div class="container winners__inner">
+                <div class="winners__content">
+                    <div class="bg-red winners__title">BIGGEST LOTTERY WINNER</div>
+                    <div class="winners__card">
+                        <div class="winners__card--title d-flex align-items-center">
+                            <img src="./assets/img/win.png" alt="">
+                            <p>Won </p><span>€100 000 000</span>                    
+                        </div>
+                        <div class="winners__card--content d-flex align-items-center">
+                            <div class="winners__card--img">
+                                <img src="./assets/img/winners.png" alt="">
+                            </div>
+                            <div class="winners__card--res d-flex">
+                                <p>UK Lotto results:</p>
+                                <ul class="d-flex">
+                                    <li>07</li>
+                                    <li>07</li>
+                                    <li>07</li>
+                                    <li>07</li>
+                                    <li>07</li>
+                                </ul>
+                                <span>Date: 20.11.2021</span>
+                            </div>
+                        </div>
+                        <div class="winners__card--description d-flex">
+                            <div class="winners__card--text d-flex">
+                                <p>Shaun Vincent a Lottery Winner</p>
+                                <p>Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.</p>
+                                <a href="/">Read the full story</a>
+                            </div>
+                            <a href="/" class="btn winners__card--btn">Play Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="winners__side">
+                    <div class="bg-red winners__title">OUR LATEST WINNERS</div>
+                    <div class="winners__total d-flex">
+                        <div class="winners__total--subtitle">Total prizes paid out</div>
+                        <div class="winners__total--title">US$ 107 233 768</div>
+                        <div class="winners__total--tickets"> <span>6 975 146</span> winning tickets</div>
+                    </div>
+                    <div class="winners__list d-flex">
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                        <div class="winners__list--item">
+                            <div class="winners__list--img">
+                                <img src="./assets/img/winner.png" alt="">
+                            </div>
+                            <div class="winners__list--content">
+                                <p>20.11.2021</p>
+                                <div class="winners__list--name d-flex align-items-center">
+                                    <img src="./assets/img/country2.png" alt="">
+                                    <p>J.J won  Р175</p>
+                                </div>
+                                <p>in   7 ИЗ 49   draw  #13476</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq d-none d-xl-block">
+            <div class="container">
+                <h3 class="faq__title title">FREQUENTLY ASKED QUESTION (F.A.Q.)</h3>
+                <div class="faq__list accordion">
+                    <div class="faq__item ">
+                        <h2 class="faq__item--title">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Can I play the lottery online?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class=" collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body faq__item--text">
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__item ">
+                        <h2 class="faq__item--title">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+                                How will I get my wins?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class=" collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body faq__item--text">
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__item ">
+                        <h2 class="faq__item--title">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+                                Is it safe to play lottery online?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class=" collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body faq__item--text">
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                                This is text in accordion. Example. Shaun Vincent, from Barnsley, celebrates his £1,158,038 National Lottery win after his cheque presentation at the Cedar Court Hotel, Wakefield.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+    <footer class="footer container">
+        <div class="footer__bg">
+            <img src="./assets/img/footer-bg.png" alt="">
+        </div>
+        <div class="footer__inner d-flex">
+            <div class="footer__content">
+                <div class="footer__chat">
+                    <div class="footer__chat--img">
+                        <img src="./assets/img/whatsapp.png" alt="">
+                    </div>
+                    <div class="footer__chat--title">Live chat by WhatsApp</div>
+                    <div class="footer__chat--subtitle">Customer Service</div>
+                </div>
+                <div class="footer__nav d-flex">
+                    <div class="footer__nav--menu">
+                        <div class="footer__nav--title">USEFUL LINKS</div>
+                        <ul>
+                           <li><a href="/">Home</a></li>
+                           <li><a href="/">Lottery Results & Winners</a></li>
+                           <li><a href="/">Lottery Promotions</a></li>
+                           <li><a href="/">About Us</a></li>
+                           <li><a href="/">Contact Us</a></li>
+                           <li><a href="/">Terms & Conditions</a></li>
+                           <li><a href="/">Security</a></li>
+                           <li><a href="/">Privacy Policy</a></li>
+                           <li><a href="/">Acceptable Use Policy</a></li>
+                           <li><a href="/">Affiliate program</a></li>
+                        </ul>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="footer__nav--text">
+                <div class="footer__nav--title">SMARTWINNERS</div>
+                <p>The trade name SmartWinners and all content on this website is a copyright of SmartWinners Limited. All rights reserved. We are an independent lottery ticket purchasing service. We are not affiliated with nor are we endorsed by any State sanctioned lottery organization. We make no claims on our site to be such. </p>
+                <p>Our registered business address is Unit 6158, PO Box 6945, London, W1A 6US, United Kingdom.</p>
+            </div>     
+            <div class="footer__side">
+                <div class="footer__side--links">
+                    <a href="/">
+                        <img src="./assets/img/facebook.png" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./assets/img/twitter.png" alt="">
+                    </a>
+                    <a href="/">
+                        <img src="./assets/img/messenger.png" alt="">
+                    </a>
+                </div>
+                <div class="footer__payment">
+                    <div class="footer__payment--title">PAYMENT METHODS</div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/Visa.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/MasterCard.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/Maestro.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/DinersClub.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/Skrill.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/Bitcoin.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/qiwi.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/hsbc.png" alt="">
+                    </div>
+                    <div class="footer__payment--item">
+                        <img src="./assets/img/litecoin.png" alt="">
+                    </div>
+                </div>
+                <div class="footer__security">
+                    <div class="footer__security--title">SECURITY & TRUST</div>
+                    <div class="footer__security--item">
+                        <img src="./assets/img/ctv.png" alt="">
+                    </div>
+                    <div class="footer__security--item">
+                        <img src="./assets/img/comodo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="assets/js/app.min.js"></script></body>
+
+</html>
